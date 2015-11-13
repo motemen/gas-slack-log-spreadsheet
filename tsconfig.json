@@ -1,0 +1,12 @@
+{
+    "compilerOptions": {
+        "module": "commonjs",
+        "out": "app.js",
+        "target": "ES5",
+        "noImplicitAny": true
+    },
+    "files": [
+        "src/app.ts",
+        "typings/bundle.d.ts"
+    ]
+}

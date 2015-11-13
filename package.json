@@ -1,0 +1,17 @@
+{
+  "name": "gas-slack-log-spreadsheet",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "postinstall": "dtsm --insight=false install",
+    "build": "tsc"
+  },
+  "keywords": [],
+  "author": "motemen <https://motemen.github.io/>",
+  "license": "ISC",
+  "private": true,
+  "devDependencies": {
+    "dtsm": "^0.13.0",
+    "typescript": "^1.6.2"
+  }
+}
