@@ -293,8 +293,8 @@ class SlackChannelHistoryLogger {
     return messages.reverse();
   }
 
-  unescapeMessageText(text: string): string {
-    return text
+  unescapeMessageText(text?: string): string {
+    return (text || '')
       .replace(/&lt;/g, '<')
       .replace(/&gt;/g, '>')
       .replace(/&quot;/g, '"')

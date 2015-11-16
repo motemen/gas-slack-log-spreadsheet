@@ -205,7 +205,7 @@ var SlackChannelHistoryLogger = (function () {
     };
     SlackChannelHistoryLogger.prototype.unescapeMessageText = function (text) {
         var _this = this;
-        return text
+        return (text || '')
             .replace(/&lt;/g, '<')
             .replace(/&gt;/g, '>')
             .replace(/&quot;/g, '"')
