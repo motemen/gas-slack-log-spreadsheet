@@ -46,7 +46,7 @@ var SlackChannelHistoryLogger = (function () {
         });
         var teamInfoResp = this.requestSlackAPI('team.info');
         this.teamName = teamInfoResp.team.name;
-        var channelsResp = this.requestSlackAPI('channels.list');
+        var channelsResp = this.requestSlackAPI('conversations.list');
         for (var _i = 0, _a = channelsResp.channels; _i < _a.length; _i++) {
             var ch = _a[_i];
             this.importChannelHistoryDelta(ch);
@@ -190,7 +190,7 @@ var SlackChannelHistoryLogger = (function () {
                 options['oldest'] = oldest;
             }
             // order: recent-to-older
-            var resp = _this.requestSlackAPI('channels.history', options);
+            var resp = _this.requestSlackAPI('conversations.history', options);
             messages = resp.messages.concat(messages);
             return resp;
         };
@@ -216,4 +216,4 @@ var SlackChannelHistoryLogger = (function () {
         });
     };
     return SlackChannelHistoryLogger;
-})();
+}());
